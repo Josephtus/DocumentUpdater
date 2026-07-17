@@ -1,0 +1,435 @@
+/* --- ANA SAYFA --- */
+.main_page {
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 10vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.main_title {
+  color: #1a1a1a;
+  margin-bottom: 150px;
+  font-size: 60px;
+  letter-spacing: -1px;
+}
+
+.main_content {
+  display: flex;
+  gap: 100px;
+}
+
+.main_content_boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid transparent; 
+}
+
+.main_content_boxes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.main_content_boxes.drag_active {
+  border: 2px dashed #007BFF;
+  background-color: #f8fbff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+}
+.excel_button, .pdf_button, .upload_button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 130px;
+  border: none;
+  border-radius: 48px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.excel_button:active, .pdf_button:active, .upload_button:active, .modal_btn:active {
+  transform: scale(0.96);
+}
+
+.excel_button {
+  background-color: #217346; 
+  color: white;
+}
+.excel_button:hover {
+  background-color: #185a36;
+}
+
+.pdf_button {
+  background-color: #F40F02;
+  color: white;
+}
+.pdf_button:hover {
+  background-color: #c40a00;
+}
+
+.upload_button {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px solid #ced4da;
+}
+.upload_button:hover {
+  background-color: #dde2e6;
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal_box {
+  background-color: white;
+  width: 60%;
+  height: 70%;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.modal_title {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal_pdf_space {
+  flex-grow: 1;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 2px dashed #cbd3da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.modal_buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.modal_btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 130px;
+  cursor: pointer;
+  border: none;
+  border-radius: 48px;
+  transition: background-color 0.2s ease;
+}
+
+.download_btn {
+  background-color: #007BFF;
+  color: white;
+}
+.download_btn:hover {
+  background-color: #0056b3;
+}
+
+.close_btn {
+  background-color: #dc3545;
+  color: white;
+}
+.close_btn:hover {
+  background-color: #a71d2a;
+}
+
+/* --- YAPAY ZEKA BÖLÜMÜ --- */
+.ai_section {
+  margin-top: 60px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ai_section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.ai_title {
+  color: #1a1a1a; 
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.ai_buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.ai_btn {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 48px;
+  color: white;
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.ai_btn:active {
+  transform: scale(0.96);
+}
+
+.ai_btn:hover {
+  filter: brightness(1.2);
+}
+
+.excel_ai {
+  background-color: #217346;
+  width: 170px;
+}
+
+.pdf_ai {
+  background-color: #F40F02;
+  width: 170px;
+}
+
+.ai_message_box {
+  width: 100%;
+  background-color: #2b2b40;
+  color: #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #00ffcc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.top_actions {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.action_button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.action_button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: #f8f9fa;
+}
+
+.action_button:active {
+  transform: scale(0.95);
+}
+
+.lang_button {
+  font-size: 14px;
+}
+
+.help_modal_box {
+  width: 40%;
+  height: auto;
+  max-width: 600px;
+}
+
+.help_steps {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #1a1a1a;
+}
+
+.step_number {
+  background-color: #1a1a1a;
+  color: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step p {
+  margin: 0;
+  font-size: 15px;
+  color: #495057;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* --- YENİ SAĞ ÜST AKSİYON BUTONLARI (Uiverse) --- */
+.button-box.top_actions_animated {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 100;
+  transform: scale(0.9); /* Köşeye tam oturması için hafif küçültüldü */
+}
+
+/* Kullanıcının Eklediği Animasyon Kodları */
+.button-box {
+  position: relative;
+  width: 12rem;
+  height: 5rem;
+  display: flex;
+}
+.button-box .button {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  border: 3px solid #311703;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0.85;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.button-box .button .icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: 0.25s;
+}
+.button-box .button:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 30;
+  background: #ff7f50; /* Dil Butonu Rengi */
+}
+.button-box .button:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(-115deg);
+  z-index: 40;
+  background: #ffd700; /* Yardım Butonu Rengi */
+}
+.button-box .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 50;
+  background: #019b98; /* Çark Butonu Rengi */
+}
+.button-box .button:nth-child(6) .icon {
+  animation: active 2.2s linear infinite;
+}
+.button-box .touch {
+  position: relative;
+  z-index: 60;
+  height: 100%;
+  flex: 1;
+  cursor: pointer;
+}
+.button-box .touch.left:hover ~ .button:nth-child(4) {
+  opacity: 1;
+  transform: translate(-170%, -50%) rotate(-90deg) scale(1.05);
+}
+.button-box .touch.left:hover ~ .button:nth-child(4) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.left:active ~ .button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(-90deg) scale(0.9);
+}
+.button-box .touch.right:hover ~ .button:nth-child(5) {
+  opacity: 1;
+  transform: translate(70%, -50%) rotate(90deg) scale(1.05);
+}
+.button-box .touch.right:hover ~ .button:nth-child(5) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.right:active ~ .button:nth-child(5) {
+  transform: translate(70%, -50%) rotate(90deg) scale(0.9);
+}
+.button-box .touch.middle:hover ~ .button:nth-child(6) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+}
+.button-box .touch.middle:hover ~ .button:nth-child(6) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.middle:active ~ .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg) scale(0.9);
+}
+.button-box:hover .button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(-90deg);
+}
+.button-box:hover .button:nth-child(5) {
+  transform: translate(70%, -50%) rotate(90deg);
+}
+.button-box:hover .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.button-box:hover .button:nth-child(6) .icon {
+  animation: active 4s linear infinite;
+}
+@keyframes active {
+  to {
+    transform: rotate(360deg);
+  }
+}
