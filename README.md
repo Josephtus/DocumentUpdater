@@ -8,6 +8,9 @@
 
 *Built with Spring Boot + React · Powered by Ollama (qwen2.5-coder:7b)*
 
+<img src="./assets/documentUmain.png" alt="Octoqus Hero Desktop" width="100%">
+
+<br/><br/>
 [![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.0-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
