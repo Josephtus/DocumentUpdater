@@ -1,6 +1,6 @@
 export const translations = {
   tr: {
-    title: "Document Updater",
+    title: "Documentus",
     excelBtn: "Excel",
     pdfBtn: "PDF",
     uploadBtn: "Yükle",
@@ -32,7 +32,7 @@ export const translations = {
     langSwitchTooltip: "Switch to English"
   },
   en: {
-    title: "Document Updater",
+    title: "Documentus",
     excelBtn: "Excel",
     pdfBtn: "PDF",
     uploadBtn: "Upload",
