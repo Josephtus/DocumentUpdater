@@ -183,7 +183,7 @@ The application supports **Turkish** and **English** with a single-click toggle.
 |---|---|---|
 | UI Labels | ✅ | ✅ |
 | AI Prompts | ✅ | ✅ |
-| Error Messages | ✅ | ✅ |
+| Error Messages | ✅ | ❌ |
 | Help Guide | ✅ | ✅ |
 
 ---
@@ -198,31 +198,6 @@ The application is designed to be **resilient**. If the Ollama AI engine is offl
 - ⚠️ AI analysis buttons display a friendly informational message instead of crashing
 
 This ensures core document management functionality is **always available**, regardless of the AI engine status.
-
----
-
-## 📸 Screenshots
-
-> *After running the application, you can access the main interface at `http://localhost:5173`.*
-> 
-> The interface features:
-> - **Document panels** for Excel and PDF with drag & drop zones
-> - **AI Assistant section** with analysis buttons for each file type
-> - **PDF Preview modal** with embedded viewer and download option
-> - **Help modal** with step-by-step usage guide
-> - **Floating octopus mascot** that animates across the screen
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ---
 
