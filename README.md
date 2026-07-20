@@ -48,7 +48,7 @@
 ## 🏗️ Architecture
 
 ```
-DocumentUpdater/
+Documentus/
 ├── backend/                          # Spring Boot REST API (Java 17)
 │   └── src/main/java/com/
 │       ├── backend_app.java          # Application entry point
@@ -121,8 +121,8 @@ graph LR
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/DocumentUpdater.git
-cd DocumentUpdater
+git clone https://github.com/Josephtus/Documentus.git
+cd Documentus
 ```
 
 ### 2. Set Up the AI Model
