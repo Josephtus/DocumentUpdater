@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📄 Document Updater
+# 📄 Documentus
 
 ### AI-Powered Document Management System
 
@@ -23,7 +23,7 @@
 
 ## 🎯 Overview
 
-**Document Updater** is a full-stack web application that enables users to upload, preview, download, and **AI-analyze** Excel (`.xlsx`/`.xls`) and PDF documents. The application integrates with [Ollama](https://ollama.com/) running locally on your machine, using the **qwen2.5-coder:7b** model to provide intelligent document summaries and analysis — all without sending your data to any external server.
+**Documentus** is a full-stack web application that enables users to upload, preview, download, and **AI-analyze** Excel (`.xlsx`/`.xls`) and PDF documents. The application integrates with [Ollama](https://ollama.com/) running locally on your machine, using the **qwen2.5-coder:7b** model to provide intelligent document summaries and analysis — all without sending your data to any external server.
 
 > 🔒 **Privacy First:** All AI processing happens locally on your machine. Your documents never leave your computer.
 
