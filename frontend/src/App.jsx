@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { translations } from './translations' // Sözlüğü dışarıdan çekiyoruz
 import './App.css'
+import { FloatingOctopus } from './FloatingOctopus.jsx'; // Dosya yoluna göre ayarla
 
 function App() {
   const excelConnection = useRef(null)
@@ -239,7 +240,8 @@ function App() {
 
   return (
     <div className="main_page">
-      
+      <FloatingOctopus />
+
       {/* SAĞ ÜST AKSİYON BUTONLARI (Dil ve Yardım) */}
       <div className="top_actions">
         <button 
@@ -269,9 +271,27 @@ function App() {
           onDragLeave={() => setIsExcelDragActive(false)}
           onDrop={handleExcelDrop}
         >
-          <button className="excel_button" onClick={handleExcelDownload}>
-            {t.excelBtn}
+           {/*<button className="excel_button" onClick={handleExcelDownload}>{t.excelBtn}</button>*/}
+          
+          {/* ANİMASYONLU EXCEL İNDİRME BUTONU */}
+          <button className="button-with-icon" onClick={handleExcelDownload}>
+            <svg 
+              className="icon" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="white" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span className="text">Excel</span>
           </button>
+
+          
           <button className="upload_button" onClick={() => excelConnection.current.click()}>
             {t.uploadBtn}
           </button>
@@ -285,9 +305,27 @@ function App() {
           onDragLeave={() => setIsPdfDragActive(false)}
           onDrop={handlePdfDrop}
         >
-          <button className="pdf_button" onClick={() => setPdfModalOn(true)}>
-            {t.pdfBtn}
+          {/*<button className="pdf_button" onClick={() => setPdfModalOn(true)}>{t.pdfBtn}</button>*/}
+
+          {/* ANİMASYONLU EXCEL İNDİRME BUTONU */}
+          <button className="button-with-icon-pdf" onClick={() => setPdfModalOn(true)}>
+            <svg 
+              className="icon-pdf" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="white" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span className="text-pdf">{t.pdfBtn}</span>
           </button>
+
+
           <button className="upload_button" onClick={() => pdfConnection.current.click()}>
             {t.uploadBtn}
           </button>
