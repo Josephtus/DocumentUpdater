@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📄 Documentus
+# Documentus
 
 ### AI-Powered Document Management System
 
@@ -21,31 +21,31 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **Documentus** is a full-stack web application that enables users to upload, preview, download, and **AI-analyze** Excel (`.xlsx`/`.xls`) and PDF documents. The application integrates with [Ollama](https://ollama.com/) running locally on your machine, using the **qwen2.5-coder:7b** model to provide intelligent document summaries and analysis — all without sending your data to any external server.
 
-> 🔒 **Privacy First:** All AI processing happens locally on your machine. Your documents never leave your computer.
+> **Privacy First:** All AI processing happens locally on your machine. Your documents never leave your computer.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 📤 **File Upload** | Upload Excel (`.xlsx`, `.xls`) and PDF files via button click or **drag & drop** |
-| 📥 **File Download** | Download uploaded documents with their original filenames preserved |
-| 👁️ **PDF Preview** | In-app modal with embedded PDF viewer — preview before downloading |
-| 🤖 **AI Analysis** | Analyze uploaded documents using a locally running Ollama AI model |
-| 🌍 **Multi-Language** | Full Turkish 🇹🇷 and English 🇬🇧 language support with persistent preference |
-| 🐙 **Animated Mascot** | Floating animated octopus mascot using sprite animation & Framer Motion |
-| 🛡️ **Graceful Degradation** | App works fully even if Ollama is offline — AI features degrade gracefully |
-| 📡 **Swagger/OpenAPI** | Auto-generated API documentation via Springdoc OpenAPI |
-| 🎨 **Modern UI** | Clean, responsive design with hover effects, micro-animations & glassmorphism |
+| **File Upload** | Upload Excel (`.xlsx`, `.xls`) and PDF files via button click or **drag & drop** |
+| **File Download** | Download uploaded documents with their original filenames preserved |
+| **PDF Preview** | In-app modal with embedded PDF viewer — preview before downloading |
+| **AI Analysis** | Analyze uploaded documents using a locally running Ollama AI model |
+| **Multi-Language** | Full Turkish 🇹🇷 and English 🇬🇧 language support with persistent preference |
+| **Animated Mascot** | Floating animated octopus mascot using sprite animation & Framer Motion |
+| **Graceful Degradation** | App works fully even if Ollama is offline — AI features degrade gracefully |
+| **Swagger/OpenAPI** | Auto-generated API documentation via Springdoc OpenAPI |
+| **Modern UI** | Clean, responsive design with hover effects, micro-animations & glassmorphism |
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Documentus/
@@ -82,7 +82,7 @@ graph LR
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 | Technology | Purpose |
@@ -110,7 +110,7 @@ graph LR
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -159,7 +159,7 @@ Navigate to **[http://localhost:5173](http://localhost:5173)** in your browser. 
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 All endpoints are served under the base path `/api/files`.
 
@@ -171,11 +171,11 @@ All endpoints are served under the base path `/api/files`.
 | `GET` | `/api/files/download/pdf` | Download the stored PDF file |
 | `GET` | `/api/files/analyze/{fileType}?lang={tr\|en}` | AI analysis of the specified file type |
 
-> 📘 **Swagger UI** is available at [`http://localhost:8080/swagger-ui.html`](http://localhost:8080/swagger-ui.html) when the backend is running.
+> **Swagger UI** is available at [`http://localhost:8080/swagger-ui.html`](http://localhost:8080/swagger-ui.html) when the backend is running.
 
 ---
 
-## 🌍 Language Support
+## Language Support
 
 The application supports **Turkish** and **English** with a single-click toggle. Language preference is stored in `localStorage` and persists across sessions.
 
@@ -188,20 +188,20 @@ The application supports **Turkish** and **English** with a single-click toggle.
 
 ---
 
-## 🛡️ Graceful Degradation
+## Graceful Degradation
 
 The application is designed to be **resilient**. If the Ollama AI engine is offline or unreachable:
 
-- ✅ File upload/download continues to work normally
-- ✅ PDF preview continues to work normally
-- ✅ Language switching works normally
-- ⚠️ AI analysis buttons display a friendly informational message instead of crashing
+- File upload/download continues to work normally
+- PDF preview continues to work normally
+- Language switching works normally
+- AI analysis buttons display a friendly informational message instead of crashing
 
 This ensures core document management functionality is **always available**, regardless of the AI engine status.
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [Non-Commercial](LICENSE).
 
